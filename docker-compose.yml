@@ -2,6 +2,7 @@ version: '3.8'
 services:
   web:
     image: php:apache
+    command: bash -c "docker-php-ext-install mysqli && apache2-foreground"
     volumes:
      - "./:/var/www/html"
     ports:
